@@ -1,98 +1,59 @@
-/* ═══════════════════════════════════════════════════
-   Catppuccin Color Tokens
-   ═══════════════════════════════════════════════════ */
-
 /* Catppuccin Mocha (Dark) */
 [data-theme="dark"] {
-  --ctp-rosewater: #f5e0dc;
-  --ctp-flamingo:  #f2cdcd;
-  --ctp-pink:      #f5c2e7;
-  --ctp-mauve:     #cba6f7;
-  --ctp-red:       #f38ba8;
-  --ctp-maroon:    #eba0ac;
-  --ctp-peach:     #fab387;
-  --ctp-yellow:    #f9e2af;
-  --ctp-green:     #a6e3a1;
-  --ctp-teal:      #94e2d5;
-  --ctp-sky:       #89dceb;
-  --ctp-sapphire:  #74c7ec;
-  --ctp-blue:      #89b4fa;
-  --ctp-lavender:  #b4befe;
+  --ctp-text: #cdd6f4;
+  --ctp-subtext1: #bac2de;
+  --ctp-subtext0: #a6adc8;
+  --ctp-overlay1: #7f849c;
+  --ctp-surface1: #45475a;
+  --ctp-surface0: #313244;
+  --ctp-base: #1e1e2e;
+  --ctp-mauve: #cba6f7;
+  --ctp-lavender: #b4befe;
 
-  --ctp-text:      #cdd6f4;
-  --ctp-subtext1:  #bac2de;
-  --ctp-subtext0:  #a6adc8;
-  --ctp-overlay2:  #9399b2;
-  --ctp-overlay1:  #7f849c;
-  --ctp-overlay0:  #6c7086;
-  --ctp-surface2:  #585b70;
-  --ctp-surface1:  #45475a;
-  --ctp-surface0:  #313244;
-  --ctp-base:      #1e1e2e;
-  --ctp-mantle:    #181825;
-  --ctp-crust:     #11111b;
-
-  --bg:          var(--ctp-base);
-  --bg-card:     var(--ctp-surface0);
-  --text:        var(--ctp-text);
-  --text-sub:    var(--ctp-subtext0);
-  --accent:      var(--ctp-lavender);
-  --accent-hover:var(--ctp-mauve);
-  --border:      var(--ctp-surface1);
-  --shadow:      rgba(0, 0, 0, 0.4);
-  --icon-fill:   var(--ctp-subtext1);
-  --icon-hover:  var(--ctp-mauve);
-  --toggle-bg:   var(--ctp-surface1);
+  --bg: var(--ctp-base);
+  --bg-card: var(--ctp-surface0);
+  --text: var(--ctp-text);
+  --text-sub: var(--ctp-subtext0);
+  --accent: var(--ctp-lavender);
+  --accent-hover: var(--ctp-mauve);
+  --border: var(--ctp-surface1);
+  --shadow: rgba(0, 0, 0, 0.4);
+  --icon-fill: var(--ctp-subtext1);
+  --icon-hover: var(--ctp-mauve);
+  --toggle-bg: var(--ctp-surface1);
 }
 
 /* Catppuccin Latte (Light) */
 [data-theme="light"] {
-  --ctp-rosewater: #dc8a78;
-  --ctp-flamingo:  #dd7878;
-  --ctp-pink:      #ea76cb;
-  --ctp-mauve:     #8839ef;
-  --ctp-red:       #d20f39;
-  --ctp-maroon:    #e64553;
-  --ctp-peach:     #fe640b;
-  --ctp-yellow:    #df8e1d;
-  --ctp-green:     #40a02b;
-  --ctp-teal:      #179299;
-  --ctp-sky:       #04a5e5;
-  --ctp-sapphire:  #209fb5;
-  --ctp-blue:      #1e66f5;
-  --ctp-lavender:  #7287fd;
+  --ctp-text: #4c4f69;
+  --ctp-subtext1: #5c5f77;
+  --ctp-subtext0: #6c6f85;
+  --ctp-overlay1: #8c8fa1;
+  --ctp-surface1: #bcc0cc;
+  --ctp-surface0: #ccd0da;
+  --ctp-base: #eff1f5;
+  --ctp-mantle: #e6e9ef;
+  --ctp-mauve: #8839ef;
+  --ctp-lavender: #7287fd;
 
-  --ctp-text:      #4c4f69;
-  --ctp-subtext1:  #5c5f77;
-  --ctp-subtext0:  #6c6f85;
-  --ctp-overlay2:  #7c7f93;
-  --ctp-overlay1:  #8c8fa1;
-  --ctp-overlay0:  #9ca0b0;
-  --ctp-surface2:  #acb0be;
-  --ctp-surface1:  #bcc0cc;
-  --ctp-surface0:  #ccd0da;
-  --ctp-base:      #eff1f5;
-  --ctp-mantle:    #e6e9ef;
-  --ctp-crust:     #dce0e8;
-
-  --bg:          var(--ctp-base);
-  --bg-card:     var(--ctp-mantle);
-  --text:        var(--ctp-text);
-  --text-sub:    var(--ctp-subtext0);
-  --accent:      var(--ctp-lavender);
-  --accent-hover:var(--ctp-mauve);
-  --border:      var(--ctp-surface1);
-  --shadow:      rgba(0, 0, 0, 0.08);
-  --icon-fill:   var(--ctp-subtext1);
-  --icon-hover:  var(--ctp-mauve);
-  --toggle-bg:   var(--ctp-surface0);
+  --bg: var(--ctp-base);
+  --bg-card: var(--ctp-mantle);
+  --text: var(--ctp-text);
+  --text-sub: var(--ctp-subtext0);
+  --accent: var(--ctp-lavender);
+  --accent-hover: var(--ctp-mauve);
+  --border: var(--ctp-surface1);
+  --shadow: rgba(0, 0, 0, 0.08);
+  --icon-fill: var(--ctp-subtext1);
+  --icon-hover: var(--ctp-mauve);
+  --toggle-bg: var(--ctp-surface0);
 }
 
-/* ═══════════════════════════════════════════════════
-   Reset & Base
-   ═══════════════════════════════════════════════════ */
+/* Reset & Base */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -105,20 +66,25 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Outfit",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   background-color: var(--bg);
   color: var(--text);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.4s ease, color 0.4s ease;
-  overflow: hidden;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+  overflow-y: auto;
+  padding: 1.5rem 0;
 }
 
-/* ═══════════════════════════════════════════════════
-   Container
-   ═══════════════════════════════════════════════════ */
+/* Container */
 
 .container {
   position: relative;
@@ -127,9 +93,7 @@ body {
   padding: 1.5rem;
 }
 
-/* ═══════════════════════════════════════════════════
-   Theme Toggle
-   ═══════════════════════════════════════════════════ */
+/* Theme Toggle */
 
 .theme-toggle {
   position: fixed;
@@ -158,7 +122,9 @@ body {
 .theme-toggle .icon {
   width: 20px;
   height: 20px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
   position: absolute;
 }
 
@@ -182,9 +148,7 @@ body {
   transform: rotate(0deg);
 }
 
-/* ═══════════════════════════════════════════════════
-   Card
-   ═══════════════════════════════════════════════════ */
+/* Card */
 
 .card {
   background: var(--bg-card);
@@ -193,13 +157,14 @@ body {
   padding: 3rem 2.5rem;
   text-align: center;
   box-shadow: 0 8px 32px var(--shadow);
-  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
   animation: fadeInUp 0.6s ease both;
 }
 
-/* ═══════════════════════════════════════════════════
-   Avatar
-   ═══════════════════════════════════════════════════ */
+/* Avatar */
 
 .avatar-wrapper {
   display: flex;
@@ -213,7 +178,9 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .avatar:hover {
@@ -221,9 +188,7 @@ body {
   border-color: var(--accent-hover);
 }
 
-/* ═══════════════════════════════════════════════════
-   Typography
-   ═══════════════════════════════════════════════════ */
+/* Typography */
 
 .name {
   font-size: 1.75rem;
@@ -248,7 +213,7 @@ body {
   font-weight: 300;
   color: var(--text-sub);
   line-height: 1.6;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
   transition: color 0.4s ease;
 }
 
@@ -260,9 +225,7 @@ body {
   transition: color 0.4s ease;
 }
 
-/* ═══════════════════════════════════════════════════
-   Social Links
-   ═══════════════════════════════════════════════════ */
+/* Social Links */
 
 .social-links {
   display: flex;
@@ -288,7 +251,7 @@ body {
 }
 
 .social-link::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--accent);
@@ -322,7 +285,7 @@ body {
 
 /* Tooltip */
 .social-link::after {
-  content: attr(title);
+  content: attr(aria-label);
   position: absolute;
   bottom: calc(100% + 8px);
   left: 50%;
@@ -336,7 +299,9 @@ body {
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .social-link:hover::after {
@@ -344,9 +309,7 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
-/* ═══════════════════════════════════════════════════
-   Footer
-   ═══════════════════════════════════════════════════ */
+/* Footer */
 
 .footer {
   padding-top: 1.5rem;
@@ -361,9 +324,7 @@ body {
   transition: color 0.4s ease;
 }
 
-/* ═══════════════════════════════════════════════════
-   Animations
-   ═══════════════════════════════════════════════════ */
+/* Animations */
 
 @keyframes fadeInUp {
   from {
@@ -381,17 +342,29 @@ body {
   animation: fadeInUp 0.5s ease both;
 }
 
-.social-link:nth-child(1) { animation-delay: 0.1s; }
-.social-link:nth-child(2) { animation-delay: 0.15s; }
-.social-link:nth-child(3) { animation-delay: 0.2s; }
-.social-link:nth-child(4) { animation-delay: 0.25s; }
-.social-link:nth-child(5) { animation-delay: 0.3s; }
-.social-link:nth-child(6) { animation-delay: 0.35s; }
-.social-link:nth-child(7) { animation-delay: 0.4s; }
+.social-link:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.social-link:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.social-link:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.social-link:nth-child(4) {
+  animation-delay: 0.25s;
+}
+.social-link:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.social-link:nth-child(6) {
+  animation-delay: 0.35s;
+}
+.social-link:nth-child(7) {
+  animation-delay: 0.4s;
+}
 
-/* ═══════════════════════════════════════════════════
-   Responsive
-   ═══════════════════════════════════════════════════ */
+/* Responsive */
 
 @media (max-width: 480px) {
   .card {
@@ -416,5 +389,33 @@ body {
   .social-link svg {
     width: 20px;
     height: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 1rem;
+  }
+  .card {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+  }
+  .name {
+    font-size: 1.35rem;
+  }
+  .tagline,
+  .bio {
+    font-size: 0.8rem;
+  }
+  .social-links {
+    gap: 0.5rem;
+  }
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+  .social-link svg {
+    width: 18px;
+    height: 18px;
   }
 }
