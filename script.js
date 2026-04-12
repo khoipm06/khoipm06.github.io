@@ -10,13 +10,25 @@
     localStorage.setItem(THEME_KEY, theme);
   }
 
-  // Toggle
   toggle.addEventListener("click", () => {
-    const current = html.getAttribute("data-theme");
-    setTheme(current === "dark" ? "light" : "dark");
+    toggle.classList.remove("animate");
+    void toggle.offsetWidth;
+    toggle.classList.add("animate");
+
+    const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+
+    const rect = toggle.getBoundingClientRect();
+    html.style.setProperty("--ripple-x", `${rect.left + rect.width / 2}px`);
+    html.style.setProperty("--ripple-y", `${rect.top + rect.height / 2}px`);
+
+    if (!document.startViewTransition) {
+      setTheme(next);
+      return;
+    }
+
+    document.startViewTransition(() => setTheme(next));
   });
 
-  // Respond to system preference changes
   window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", (e) => {
