@@ -162,12 +162,16 @@ body {
 }
 
 .card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg-card) 65%, transparent);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
   border-radius: 24px;
   padding: 3rem 2.5rem;
   text-align: center;
-  box-shadow: 0 8px 32px var(--shadow);
+  box-shadow: 
+    0 8px 32px var(--shadow),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
   transition:
     background-color 0.4s ease,
     border-color 0.4s ease,
@@ -233,6 +237,23 @@ body {
   color: var(--ctp-overlay1);
   margin-bottom: 2rem;
   transition: color 0.4s ease;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.location::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: var(--ctp-overlay1);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.location:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 .social-links {
@@ -266,25 +287,12 @@ body {
   overflow: hidden;
 }
 
-.social-link::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--accent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 13px;
-}
-
 .social-link:hover {
+  background: var(--accent);
   color: var(--bg);
   border-color: var(--accent);
   transform: translateY(-3px);
   box-shadow: 0 6px 20px color-mix(in srgb, var(--accent) 30%, transparent);
-}
-
-.social-link:hover::before {
-  opacity: 1;
 }
 
 .social-link svg {
@@ -304,7 +312,7 @@ body {
   position: absolute;
   bottom: calc(100% + 8px);
   left: 50%;
-  transform: translateX(-50%) translateY(4px);
+  transform: translateX(-50%) translateY(10px) scale(0.85);
   padding: 4px 10px;
   background: var(--ctp-surface1);
   color: var(--text);
@@ -316,12 +324,12 @@ body {
   pointer-events: none;
   transition:
     opacity 0.2s ease,
-    transform 0.2s ease;
+    transform 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
 .social-link:hover::after {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(0) scale(1);
 }
 
 .footer {
@@ -489,4 +497,38 @@ body {
 }
 .action-menu-btn:hover {
   background: var(--ctp-surface0);
+}
+
+.ambient-glow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.ambient-glow::before, .ambient-glow::after {
+  content: ' ';
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  animation: floatBackground 6s infinite alternate ease-in-out;
+}
+.ambient-glow::before {
+  top: -5vw;
+  left: -5vw;
+  background: var(--accent);
+}
+.ambient-glow::after {
+  bottom: -5vw;
+  right: -5vw;
+  background: var(--ctp-mauve);
+  animation-delay: -4s;
+}
+
+@keyframes floatBackground {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(6vw, 6vw) scale(1.1); }
 }
