@@ -123,6 +123,12 @@ body {
   }
 }
 
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: rotate(15deg);
+}
+
 .theme-toggle .icon {
   width: 20px;
   height: 20px;
