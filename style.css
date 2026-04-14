@@ -103,6 +103,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
   transition: all 0.4s ease;
   z-index: 100;
 }
@@ -184,6 +187,9 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
   transition:
     border-color 0.3s ease,
     transform 0.3s ease;
@@ -247,6 +253,10 @@ body {
   border: 1px solid var(--border);
   color: var(--icon-fill);
   text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
