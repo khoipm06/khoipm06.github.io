@@ -327,10 +327,10 @@ body {
     transform 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
-.social-link:hover::after {
+/* .social-link:hover::after {
   opacity: 1;
   transform: translateX(-50%) translateY(0) scale(1);
-}
+} */
 
 .footer {
   padding-top: 1.5rem;
