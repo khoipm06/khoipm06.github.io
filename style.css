@@ -438,6 +438,16 @@ body {
   }
 }
 
+/* iOS fade fallback */
+html.theme-transitioning,
+html.theme-transitioning * {
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease !important;
+}
+
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
@@ -446,19 +456,6 @@ body {
 
 ::view-transition-old(root) {
   opacity: 1;
-}
-
-::view-transition-new(root) {
-  animation: vt-bubble-in 1s cubic-bezier(0.8, 0, 0.2, 1) forwards;
-}
-
-@keyframes vt-bubble-in {
-  from {
-    clip-path: circle(0% at var(--ripple-x, 50%) var(--ripple-y, 0%));
-  }
-  to {
-    clip-path: circle(150% at var(--ripple-x, 50%) var(--ripple-y, 0%));
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
