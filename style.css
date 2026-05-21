@@ -126,10 +126,16 @@ body {
   }
 }
 
-.theme-toggle:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: rotate(15deg);
+@media (hover: hover) and (pointer: fine) {
+  .theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: rotate(15deg);
+  }
+}
+
+.theme-toggle:focus {
+  outline: none;
 }
 
 .theme-toggle .icon {

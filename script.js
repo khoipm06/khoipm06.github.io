@@ -14,6 +14,7 @@
     toggle.classList.remove("animate");
     void toggle.offsetWidth;
     toggle.classList.add("animate");
+    // toggle.blur();
 
     const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
 
